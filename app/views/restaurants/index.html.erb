@@ -1,0 +1,10 @@
+<h1>Checkout all these restaurants!</h1>
+
+<%= link_to "Create a restaurant", new_restaurant_path %>
+
+<% @restaurants.each do |restaurant| %>
+  <h3><%= link_to restaurant.name, restaurant_path(restaurant.id) %> (<%= "⭐" * restaurant.rating %>)</h3>
+  <h4>Address: <%= restaurant.address %></h4>
+<% end %>
+
+
